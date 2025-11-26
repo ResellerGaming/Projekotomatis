@@ -1,0 +1,14 @@
+{
+  "name": "resming-bot-store",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "node api/index.js",
+    "build": "echo 'No build step'"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "axios": "^1.7.2",
+    "uuid": "^10.0.0",
+    "fs-extra": "^11.2.0"
+  }
+}
