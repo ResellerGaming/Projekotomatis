@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <title>RESMING BOT STORE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="bg-gray-900 text-green-400 min-h-screen flex flex-col items-center p-8">
+  <h1 class="text-3xl font-bold mb-2">🤖 RESMING PTERODACTYL BOT STORE</h1>
+  <p class="mb-6">Pembelian otomatis via QRIS</p>
+
+  <div class="grid md:grid-cols-3 gap-6">
+    <!-- card produk -->
+    <div class="border border-green-400 rounded p-4">
+      <h2 class="text-xl mb-2">Pre Order Script V1</h2>
+      <p class="mb-3">Rp 10.000</p>
+      <form action="/beli" method="post">
+        <button name="id_produk" value="1" class="bg-green-400 text-black px-4 py-2 rounded">Beli</button>
+      </form>
+    </div>
+    <!-- ulangi untuk produk lain -->
+    <div class="border border-green-400 rounded p-4">
+      <h2 class="text-xl mb-2">Script Website V1</h2>
+      <p class="mb-3">Rp 15.000</p>
+      <form action="/beli" method="post">
+        <button name="id_produk" value="2" class="bg-green-400 text-black px-4 py-2 rounded">Beli</button>
+      </form>
+    </div>
+    <div class="border border-green-400 rounded p-4">
+      <h2 class="text-xl mb-2">Free Up 1x</h2>
+      <p class="mb-3">Rp 20.000</p>
+      <form action="/beli" method="post">
+        <button name="id_produk" value="3" class="bg-green-400 text-black px-4 py-2 rounded">Beli</button>
+      </form>
+    </div>
+    <div class="border border-green-400 rounded p-4">
+      <h2 class="text-xl mb-2">Free Up Full</h2>
+      <p class="mb-3">Rp 30.000</p>
+      <form action="/beli" method="post">
+        <button name="id_produk" value="4" class="bg-green-400 text-black px-4 py-2 rounded">Beli</button>
+      </form>
+    </div>
+    <div class="border border-green-400 rounded p-4">
+      <h2 class="text-xl mb-2">Reseller Script</h2>
+      <p class="mb-3">Rp 50.000</p>
+      <form action="/beli" method="post">
+        <button name="id_produk" value="5" class="bg-green-400 text-black px-4 py-2 rounded">Beli</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="mt-10 max-w-2xl text-center">
+    <p class="mb-2">📢 HELLO EVERYONE✨<br>
+    THIS IS AN UPDATE INFORMATION GROUP FROM THE <code class="bg-gray-800 px-2 rounded">RESMING PTERODACTYL</code> WEBSITE</p>
+    <button onclick="toggleId()" class="underline">Terjemahkan ke Indonesia</button>
+    <div id="idver" class="hidden mt-2">📢 Halo Semua✨<br>
+    Ini info terbaru dari grup website <code class="bg-gray-800 px-2 rounded">RESMING PTERODACTYL</code></div>
+  </div>
+
+  <script>
+    function toggleId(){
+      document.getElementById('idver').classList.toggle('hidden');
+    }
+  </script>
+  <script src="/script.js" defer></script>
+</body>
+</html>
