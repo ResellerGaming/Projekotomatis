@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <title>Selesai – RESMING STORE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+ <link rel="stylesheet" href="/style.css">
+</head>
+<body class="bg-gray-900 text-green-400 min-h-screen flex flex-col items-center justify-center p-8">
+  <h1 class="text-3xl mb-4">✅ Pembayaran Diterima!</h1>
+  <p class="mb-2">Produk: <span id="prod"></span></p>
+  <p class="mb-2">Telegram: <span id="tgl"></span></p>
+  <p class="mb-4">Email: <span id="eml"></span></p>
+  <p class="font-bold">Screenshot halaman ini sebagai bukti!</p>
+  <p>Kami akan hubungi Anda via Telegram.</p>
+  <a href="/" class="mt-6 bg-green-400 text-black px-4 py-2 rounded">Kembali ke Home</a>
+
+  <script>
+    const raw=localStorage.getItem('resming_last');
+    if(raw){
+      const d=JSON.parse(raw);
+      document.getElementById('prod').textContent=d.nama;
+      document.getElementById('tgl').textContent=d.telegram;
+      document.getElementById('eml').textContent=d.email;
+    }
+  </script>
+  <script src="/script.js" defer></script>
+</body>
+</html>
