@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <title>Struk – RESMING STORE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="bg-gray-900 text-green-400 min-h-screen flex flex-col items-center p-8">
+  <h1 class="text-2xl font-bold mb-4">Struk Pembelian</h1>
+
+  <form action="/struk" method="post" class="w-full max-w-md space-y-4">
+    <input type="hidden" name="s" value="">
+    <label class="block">Telegram Username</label>
+    <input name="telegram" required placeholder="@username" class="w-full bg-gray-800 border border-green-400 rounded px-3 py-2"/>
+    <label class="block">Email</label>
+    <input name="email" type="email" required class="w-full bg-gray-800 border border-green-400 rounded px-3 py-2"/>
+    <button class="w-full bg-green-400 text-black rounded py-2">Lanjutkan & Cek Pembayaran</button>
+  </form>
+
+  <div class="mt-6 text-sm">
+    <p>Detail pembayaran akan muncul setelah submit form.</p>
+  </div>
+
+  <script>
+    const params=new URLSearchParams(location.search);
+    document.querySelector('input[name="s"]').value=params.get('s');
+  </script>
+  <script src="/script.js" defer></script>
+</body>
+</html>
